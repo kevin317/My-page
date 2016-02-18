@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <script src="js/jquery-1.12.0.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<title>Kevin's Portfolio</title>
+</head>
+
+<body>
+
+	<main class="container">
+
+		<header class="row">
+			<span class="col-xs-5 entypo-menu"></span>
+			<div class="col-sm-6 col-md-6 col-xs-7">
+				<picture>
+                 	<source srcset="images/logo-small.png" media="(max-width:767px)">
+      				<source srcset="images/logo.png">
+      				<img class="img-responsive" id="logo" src="images/logo-small.png" alt="udacity logo">
+    			</picture>
+			</div>
+			<div class="col-sm-6 col-md-6 col-xs-12">
+			<h1 class="text-right" id="name">KEVIN ZHANG</h1>
+			<h4 class="text-right" id="title">FRONT-END NINJA</h4>
+			</div>
+		</header>
+
+		<div class="row">
+	    	<div class="col-sm-12 col-md-12">
+	    		<hr>
+	        </div>
+	    </div>
+
+	    <nav class="row text-center nav">
+	    	<a class="col-sm-4 col-md-4 nav-item" href="#me">About Me</a>
+            <a class="col-sm-4 col-md-4 nav-item" href="#work">Work</a>
+          	<a class="col-sm-4 col-md-4 nav-item" href="#contact">Contact</a>
+	    </nav>
+
+	    <div class="row">
+	    	<figure class="col-sm-12 col-md-12">
+	    	<img class="img-responsive center" src="images/web.jpeg" alt="html">
+	    	</figure>
+	    </div>
+
+	    <div class="row" id="me">
+	        <article class="col-sm-12 col-md-12 margin-top-20">
+	        	<h2>About Me</h2>
+	        	<p>Hi there! I'm Kevin Zhang. I'm a front-end web developer based in Texas. I moved in to tech field while pursuing my Master's degree in Information Systems at Baylor University. I know languages like Java and SQL and I'm learning more at Udacity. When I'm not coding, you can find me playing with my chocolate lab. I love tech, sports, fashion, music and everything in between.</p>
+	        	<a class="link-style" href="resume.pdf" target="_blank">RESUME</a>
+	        	<img class="img-responsive margin-top-20 center" src="images/me.jpg" alt="Kevin and Duke">
+	        </article>
+	    </div>
+
+	    <div class="row" id="work">
+	        <header class="col-sm-12 col-md-12 margin-top-20">
+	        	<h2>Featured Work</h2>
+	        </header>
+	    </div>
+
+	    <section class="row margin-top-20 text-center">
+		    <div class="col-sm-6 col-md-3">
+		    	<img class="img-responsive center" src="images/resume.png" alt="resume" data-toggle="modal" data-target="#resume">
+		    	<h3>ONLINE RESUME</h3>
+		    </div>
+		    <div class="col-sm-6 col-md-3">
+		    	<img class="img-responsive center" src="images/game.png" alt="controller" data-toggle="modal" data-target="#game">
+		    	<h3>ARCADE GAME</h3>
+		    </div>
+		    <div class="col-sm-6 col-md-3">
+		    	<img class="img-responsive center" src="images/map.png" alt="map" data-toggle="modal" data-target="#map">
+		    	<h3>NEIGHBORHOOD MAP</h3>
+		    </div>
+            <div class="col-sm-6 col-md-3">
+		    	<img class="img-responsive center" src="images/health.png" alt="health" data-toggle="modal" data-target="#health">
+		    	<h3>HEALTH TRACKER</h3>
+		    </div>
+	    </section>
+
+	     <div class="row" id="contact">
+	        <header class="col-sm-12 col-md-12">
+	        	<h2>Contact</h2>
+	        </header>
+		 </div>
+
+		 <div class="row">
+	        <ul class="col-sm-12 col-md-12 list-inline text-left">
+	       		<li><a class="zocial-facebook" href="https://www.facebook.com/kevinzhang317" target="_blank"></a></li>
+	       		<li><a class="zocial-twitter" href="https://twitter.com/KevinZhang317" target="_blank"></a></li>
+	       		<li><a class="zocial-linkedin" href="https://www.linkedin.com/in/kevinzhang317" target="_blank"></a></li>
+	       		<li><a class="zocial-instagram" href="https://www.instagram.com/kevinzhang317" target="_blank"></a></li>
+	       		<li><a class="zocial-gmail" href="mailto:zkw317@gmail.com"></a></li>
+	       	</ul>
+   		</div>
+
+    </main>
+
+	<script>
+      /*
+       * Open the drawer when the menu ison is clicked. Based on the final solution of Responsive Web Design Fundamentals.
+       */
+      var menu = document.querySelector('.entypo-menu');
+      var main = document.querySelector('.container');
+      var drawer = document.querySelector('.nav');
+
+      menu.addEventListener('click', function(e) {
+        drawer.classList.toggle('open');
+        e.stopPropagation();
+      });
+      main.addEventListener('click', function() {
+        drawer.classList.remove('open');
+      });
+
+    </script>
+
+    <!-- Modal -->
+	<div class="modal fade color-black" id="resume" tabindex="-1" role="dialog" aria-labelledby="resume-label" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h4 class="modal-title" id="resume-label">Online Resume</h4>
+	      </div>
+	      <div class="modal-body">
+	        <img class="img-responsive center" src="images/resume.png" alt="resume">
+	        <p>I'll build my resume by writing a JS script that will combine my personal information with pre-written HTML and CSS templates to generate my resume.</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade color-black" id="game" tabindex="-1" role="dialog" aria-labelledby="game-Label" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h4 class="modal-title" id="game-Label">Arcade Game</h4>
+	      </div>
+	      <div class="modal-body">
+	        <img class="img-responsive center" src="images/game.png" alt="controller">
+	        <p>I'll use the Object-Oriented JavaScript to recreate the classic arcade game Frogger.</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade color-black" id="map" tabindex="-1" role="dialog" aria-labelledby="map-label" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h4 class="modal-title" id="map-label">Neighborhood Map</h4>
+	      </div>
+	      <div class="modal-body">
+	        <img class="img-responsive center" src="images/map.png" alt="map">
+	        <p>I'll develop a single page application featuring a map of a neighborhood using third-party libraries and APIs.</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade color-black" id="health" tabindex="-1" role="dialog" aria-labelledby="health-label" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h4 class="modal-title" id="health-label">Health Tracker</h4>
+	      </div>
+	      <div class="modal-body">
+	        <img class="img-responsive center" src="images/health.png" alt="heart">
+	        <p>Using Backbone, I will develop a single page app that tracks the user's calorie intake, and other health-related metrics.</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+</body>
+
+</html>
+
+
+
+
+
+
